@@ -57,15 +57,15 @@ boolean POWER_SAVING_ENABLED  = true;   // toggle with -sleep on serial, see dec
 boolean DEBUG                 = false;  // toggle with +debug on serial
 
 // Arduino Pin Layout
-const int raDirPin    =  4;
+const int raDirPin    =  2;
 const int raStepPin   =  3;
-const int raButtonPin =  6;             // note this was 2 in ARto.ino
-const int raEnableMicroStepsPin  = 2;
-const int decDirPin   = 12;
-const int decStepPin  = 11;
+const int raButtonPin =  4;             // note this was 2 in ARto.ino
+const int raEnableMicroStepsPin  = 0;
+const int decDirPin   = 5;
+const int decStepPin  = 6;
 const int decButtonPin=  7;
-const int decEnableMicroStepsPin = 9;
-const int decSleepPin = 10;
+const int decEnableMicroStepsPin = 1;
+const int decSleepPin = 8;
 
 /* Experimental: Uncomment the line below to enable ST4 Port on A0-A3 pins */
 // #define ST4
