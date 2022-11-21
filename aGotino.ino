@@ -16,10 +16,10 @@
 
    How to calculate STEP_DELAY to drive motor at right sidereal speed for your mount
 
-   Worm Ratio                  144   // 144 eq5/exos2, 135 heq5, 130 eq3-2
-   Other (Pulley/Gear) Ratio     2.5 // depends on your pulley setup e.g. 40T/16T = 2.5
-   Steps per revolution        400   // or usually 200 depends on your motor
-   Microstep                    32   // depends on driver
+   Worm Ratio                  96    // 144 eq5/exos2, 135 heq5, 130 eq3-2
+   Other (Pulley/Gear) Ratio    0    // depends on your pulley setup e.g. 40T/16T = 2.5
+   Steps per revolution        200   // or usually 200 depends on your motor
+   Microstep                    16   // depends on driver
 
    MICROSTEPS_PER_DEGREE_RA  12800   // = WormRatio*OtherRatio*StepsPerRevolution*Microsteps/360
                                      // = number of microsteps to rotate the scope by 1 degree
@@ -31,12 +31,12 @@
  * Update the values below to match your mount/gear ratios and your preferences: 
  * * * * * * */
 
-const unsigned long STEP_DELAY = 18699;                // see above calculation
-const unsigned long MICROSTEPS_PER_DEGREE_RA  = 12800; // see above calculation
-const unsigned long MICROSTEPS_PER_DEGREE_DEC = MICROSTEPS_PER_DEGREE_RA; // calculate correct value if DEC gears/worm/microsteps differs from RA ones
+const unsigned long STEP_DELAY = 280591;                // see above calculation
+const unsigned long MICROSTEPS_PER_DEGREE_RA  = 853; // see above calculation
+const unsigned long MICROSTEPS_PER_DEGREE_DEC = 44; // calculate correct value if DEC gears/worm/microsteps differs from RA ones
 
-const unsigned long MICROSTEPS_RA  = 32; // RA  Driver Microsteps
-const unsigned long MICROSTEPS_DEC = 32; // DEC Driver Microsteps
+const unsigned long MICROSTEPS_RA  = 16; // RA  Driver Microsteps
+const unsigned long MICROSTEPS_DEC = 16; // DEC Driver Microsteps
 
 const long SERIAL_SPEED = 9600;          // serial interface baud. Make sure your computer/phone matches this
 long MAX_RANGE = 1800;                   // default max slew range in deg minutes (1800'=30°). See +range command
